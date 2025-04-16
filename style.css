@@ -1,0 +1,162 @@
+/* RESET & THEMING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --bg: #ffffff;
+    --text: #333;
+    --accent: #007bff;
+    --secondary: #f1f1f1;
+    --card: #fafafa;
+  }
+  
+  body.dark {
+    --bg: #1e1e1e;
+    --text: #f9f9f9;
+    --accent: #4dabf7;
+    --secondary: #333;
+    --card: #2c2c2c;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  /* LAYOUT */
+  .app {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* SIDEBAR */
+  .sidebar {
+    width: 220px;
+    background: var(--secondary);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* add a consistent gap between elements */
+  }
+  
+  .sidebar h2 {
+    font-size: 1.8rem;
+    margin-bottom: 100px; /* adjusts the heading-to-menu spacing */
+    color: var(--accent);
+  }
+  
+  
+  .sidebar nav a {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .sidebar nav a:hover,
+  .sidebar nav a.active {
+    background: var(--accent);
+    color: white;
+  }
+  
+  .toggle {
+    margin-top: 20px;
+  }
+  
+  /* MAIN AREA */
+  .main {
+    flex: 1;
+    padding: 30px;
+    background: var(--bg);
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  header input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+  
+  /* TABS */
+  .tab {
+    display: none;
+  }
+  .tab.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+  }
+  
+  /* COURSES */
+  .course {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .course:hover {
+    transform: translateY(-5px);
+  }
+  
+  .course.completed {
+    border-left: 6px solid green;
+    opacity: 0.8;
+  }
+  
+  .progress-bar {
+    background: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar div {
+    height: 100%;
+    background: #28a745;
+  }
+  
+  /* VIDEO */
+  #video-frame {
+    border-radius: 10px;
+    margin-top: 15px;
+    border: 3px solid var(--accent);
+  }
+  
+  /* ANIMATIONS */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .app {
+      flex-direction: column;
+    }
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    .sidebar nav {
+      display: flex;
+      gap: 10px;
+    }
+    .main {
+      padding: 20px;
+    }
+  }
+  

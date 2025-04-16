@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Learning Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2>E-Learn</h2>
+      <nav>
+        <a href="#" onclick="showTab('courses')" class="active">Courses</a>
+        <a href="#" onclick="showTab('progress')">Progress</a>
+        <a href="#" onclick="showTab('video')">Video</a>
+      </nav>
+      <div class="toggle">
+        <label>
+          🌙 Dark Mode
+          <input type="checkbox" id="theme-toggle">
+        </label>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header>
+        <input type="text" id="search" placeholder="Search courses..." oninput="filterCourses()" />
+      </header>
+
+      <section id="courses" class="tab active">
+        <div class="course-list" id="course-list">
+          <!-- Courses dynamically inserted -->
+        </div>
+      </section>
+
+      <section id="progress" class="tab">
+        <h2>Progress Overview</h2>
+        <div id="progress-overview"></div>
+      </section>
+
+      <section id="video" class="tab">
+        <h2 id="video-title">Course Video</h2>
+        <iframe id="video-frame" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
