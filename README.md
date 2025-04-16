@@ -57,3 +57,6 @@ Conclusion:
 This front-end-only E-learning platform is a perfect mini-project for showcasing your skills in a portfolio, practicing client-side logic, or as a foundation for a full-stack version in the future. It simulates real-world product thinking — combining design, usability, and interactivity in a way that’s practical and visually appealing.
 
 OUTPUT:
+![Image](https://github.com/user-attachments/assets/534f81c1-3e6d-4946-bc30-5800bdb76e7d)
+![Image](https://github.com/user-attachments/assets/39cb747e-5b31-4897-a722-817c4ddc0c30)
+![Image](https://github.com/user-attachments/assets/4b865f5a-0821-41ab-8185-3c1bdfbde1fc)
